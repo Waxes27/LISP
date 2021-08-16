@@ -10,7 +10,7 @@ def evaluator(command):
         
         List.List(command)
 
-
+print("Welcome to a lisp interpreter.\n")
 while True:
     command = input('>> ')
     evaluator(command)
