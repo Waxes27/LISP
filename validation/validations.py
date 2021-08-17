@@ -22,6 +22,6 @@ class Validations:
         return leftRoundBracket == 0 and leftCurlyBracket == 0
 
 
-    def isQuote(command) -> bool:
+    def isValidQuote(command) -> bool:
         """Checks if the command is a quote that should be printed as is"""
         #TODO: Implement logic for quote detection
