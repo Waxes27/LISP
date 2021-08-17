@@ -11,9 +11,8 @@ def evaluator(command):
         List.List(command)
 
 print("Welcome to a lisp interpreter.\n")
-while True:
+command = ""
+while command != "exit" and command != "quit":
     command = input('>> ')
     evaluator(command)
-    
-    
 
