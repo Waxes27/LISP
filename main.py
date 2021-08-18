@@ -1,15 +1,30 @@
-from functions import Atom
-from functions import List
-from functions import cons
+from functions import list as List
+"""
+import as below
+"""
+from functions.atom import Atom as atom
+from functions.cons import Cons as cons
 
 operators = ['+','-','*','/']
-list_of_commands = ['atom','quote','car','cdr','eq','cond','lambda','label','defunc']
+list_of_commands = [cons,atom,'quote','car','cdr','eq','cond','lambda','label','defunc']
+
+commands = {
+    
+    """
+    add your function here when complete
+    """
+
+    'cons' : cons,
+    'atom' : atom,
+    
+}
 
 def evaluator(command):
     if '(' not in command and ')' not in command:
-        Atom.Unit(command)
+        atom(command)
     elif 'cons' in command:
-        cons.Cons(command)
+        cons(command)
+
 
         # List.List(command)
 

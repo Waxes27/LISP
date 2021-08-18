@@ -1,4 +1,4 @@
-class Unit:
+class Atom:
     def __init__(self,command):
         """
         Benedict
