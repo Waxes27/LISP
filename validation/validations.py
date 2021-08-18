@@ -1,0 +1,31 @@
+class Validations:
+	def isValidExpressionBrackets(command) -> bool:
+		"""Checks if the brackets in an expression are all properly closed"""
+		if(len(command) <= 1 or command.count('(') != command.count(')')):
+			return False
+
+		leftRoundBracket = 0
+		leftCurlyBracket = 0
+		i = 0
+		while(i < len(command) and leftRoundBracket >= 0 and leftCurlyBracket >= 0):
+			if(command[i] == '('):
+				leftRoundBracket += 1
+			elif(command[i] == ')'):
+				leftRoundBracket -= 1
+			elif(command[i] == '{'):
+				leftCurlyBracket += 1
+			elif(command[i] == '}'):
+				leftCurlyBracket -= 1
+
+			i += 1
+
+		return leftRoundBracket == 0 and leftCurlyBracket == 0
+
+
+	def isValidQuote(command) -> bool:
+		"""Checks if the command is a quote that should be printed as is"""
+		if(len(command) > 1):
+			if(command[0] == "'" or command[:7] == "(quote "):
+				return True
+
+		return False

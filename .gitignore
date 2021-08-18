@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Somehow escaped
+.idea/
+**/.idea/
+.pycharm/
+**/.pycharm
