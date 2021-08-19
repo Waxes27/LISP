@@ -4,7 +4,7 @@ from functions import cdr
 
 class CdrTests(unittest.TestCase):
    
-    @unittest.skip("Currently fails and is blocking other code pushes due to new github pipeline")
+    @unittest.skip("Currently fails and is blocking other code pushes due to new gigitthub pipeline")
     def testSimpleCdr(self):
         self.assertEqual(cdr.Cdr.do(self,
         "'1 5 6 8"),['5','6','8'])
