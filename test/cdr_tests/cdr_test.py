@@ -9,7 +9,7 @@ class CdrTests(unittest.TestCase):
 
     def testSimpleCdrWithList(self):
         self.assertEqual(cdr.Cdr.do(self,
-        "(cdr ((6 9)(5 4)(7 9))"),['(5 4)','(7 9)'])
+        "(cdr '((6 9)(5 4)(7 9))"),['(5 4)','(7 9)'])
     
     def testComplexCdr(self):
         self.assertEqual(cdr.Cdr.do(self,
