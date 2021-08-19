@@ -5,6 +5,7 @@ import as below
 from functions.atom import Atom as atom
 from functions.cons import Cons as cons
 from functions.cdr import Cdr as cdr
+from functions.eq import Eq as eq
 
 
 """
@@ -23,6 +24,7 @@ commands = {
     'cons' : cons,
     'atom' : atom,
     'cdr' : cdr,
+    'eq' : eq,
 }
 
 def evaluator(command):
