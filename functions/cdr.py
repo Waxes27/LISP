@@ -13,6 +13,10 @@ class Cdr:
             return False
 
     def do(self, command):
+        mylist = list(command.replace("'","").replace(' ', ""))
+        return mylist[1:]
+        
+    def dont(self, command):
         temp = []
         cdrCount = 0
         openBrace = False

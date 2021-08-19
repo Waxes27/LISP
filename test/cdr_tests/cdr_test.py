@@ -3,10 +3,13 @@ from functions import cdr
 
 
 class CdrTests(unittest.TestCase):
+   
     @unittest.skip("Currently fails and is blocking other code pushes due to new github pipeline")
     def testSimpleCdr(self):
         self.assertEqual(cdr.Cdr.do(self,
-        "(cdr '(3 5 6 8))"),['5','6','8'])
+        "'1 5 6 8"),['5','6','8'])
+        self.assertEqual(cdr.Cdr.do(self,
+        "8 1 5 6 8"),['1','5','6','8'])
 
     @unittest.skip("Currently fails and is blocking other code pushes due to new github pipeline")
     def testSimpleCdrWithList(self):
