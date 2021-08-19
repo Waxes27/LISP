@@ -46,12 +46,10 @@ def evaluate(command):
 
 
 
-def main():
+if __name__ == "__main__":
     print("Welcome to a lisp interpreter.\n")
     command = ""
     while command != "exit" and command != "quit":
         command = input('>> ')
         print(evaluator(command))
-
-# main()
 

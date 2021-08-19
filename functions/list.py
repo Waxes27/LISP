@@ -8,7 +8,6 @@ class List:
         else:
             print('Unexpected amount of Parenthesis...')
 
-
     def lcount(self, command):
         if command.count('(') == command.count(')'):
             return True
