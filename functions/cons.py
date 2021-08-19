@@ -1,7 +1,8 @@
 class Cons:
     def __init__(self,command):
+        self.value = ''
         if self.lcount(command):
-            self.counter(command)
+            self.value = self.counter(command)
         else:
             print('Unexpected amount of Parenthesis...')
 
@@ -21,4 +22,8 @@ class Cons:
         print(temp)
         return temp
 
+
+    def __iter__(self):
+        return iter(self.value)
+        
 

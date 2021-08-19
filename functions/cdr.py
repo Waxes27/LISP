@@ -1,9 +1,9 @@
 class Cdr:
     def __init__(self,command):
-        if self.lcount(command):
-            self.do(command)
-        else:
-            print('Unexpected amount of Parenthesis...')
+        # if self.lcount(command):
+        self.do(command)
+        # else:
+            # print('Unexpected amount of Parenthesis...')
 
 
     def lcount(self, command):
