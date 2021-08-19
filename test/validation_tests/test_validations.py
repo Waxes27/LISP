@@ -17,7 +17,7 @@ class ValidationTests(unittest.TestCase):
         self.assertFalse(Validations.is_valid_expression_brackets(Validations, invalid_exp_3))
         self.assertFalse(Validations.is_valid_expression_brackets(Validations, invalid_exp_4))
         self.assertFalse(Validations.is_valid_expression_brackets(Validations, invalid_exp_5))
-        self.assertFalse(Validations.is_valid_expression_brackets(Validations, "("))
+        self.assertFalse(Validations.is_valid_expression_brackets(Validations, ")(()"))
 
     def test_quote_detected_properly(self):
         """Check if quote-only commands are consistently detected"""
