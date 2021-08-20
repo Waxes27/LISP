@@ -1,3 +1,4 @@
+from functions.quote import Quote
 from functions import list as List
 """
 import as below
@@ -31,14 +32,21 @@ def evaluator(command):
     temp = []
     print(command.replace('(',"").split()[::-1][1:])
     value = command
-    for i in command.replace('(',"").split()[::-1][1:]:
-        temp.append(i)
-        # print(temp)
-        if i in list_of_commands:
-            value = evaluate(temp[::-1])
-
-    return list(value)
     
+    if len(command)>2:
+        if command[1:6].lower() == "quote" or command[:1] == "`":
+            Quote(command)
+    # elif command[:4].lower() =="atom":
+    #     atom(command)
+    else :          
+        for i in command.replace('(',"").split()[::-1][1:]:
+            temp.append(i)
+            print(temp)
+            if i in list_of_commands:
+                value = evaluate(temp[::-1])
+
+        return list(value)
+
 
     
 
