@@ -1,11 +1,11 @@
 import unittest
 from unittest.main import main
-from functions import Quote
+from functions import quote
 
 class QouteExpressiontTest(unittest.TestCase):
     
     def test_quoteWord(self):
-        qoute = Quote.Quote('`10')
+        qoute = quote.Quote('`10')
         self.assertEqual(qoute.IsQoute('`10'),True)
         self.assertEqual(qoute.IsQoute('(quote 10)'),True)
         self.assertEqual(qoute.IsQoute('(quote Testing)'),True)
